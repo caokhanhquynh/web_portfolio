@@ -2,15 +2,14 @@
   "name": "web-portfolio",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "homepage": "https://github.com/caokhanhquynh/web_portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist" 
   },
   "dependencies": {
     "lucide-react": "^0.460.0",
