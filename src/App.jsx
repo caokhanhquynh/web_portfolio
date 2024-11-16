@@ -10,17 +10,17 @@ const Portfolio = () => {
     {
       title: "Courses Enrolment Webapp",
       description: "A collaborative full-stack web application built with SpringBoot that streamlines course management and enrollment processes. The platform features secure user authentication, Google Calendar integration, and comprehensive admin controls for course management. Key technical implementations include HTML/CSS/JavaScript for frontend, Render for deployment, REST APIs for data handling, and MockMVC for automated testing.",
-      image: "/images/courseEnrol.png"
+      image: "images/courseEnrol.png"
     },
     {
       title: "3D Rasterization",
       description: "A web-based 3D graphics application developed in JavaScript that implements fundamental computer graphics concepts. The project focuses on core rasterization techniques for rendering 3D objects, featuring advanced implementations of Triangle Meshes for object modeling, Scene Graphs for hierarchical object relationships, and Shadow Mapping for realistic lighting effects. Developed as part of SFU's CMPT361 Visual Computing course.",
-      image: "/images/3dRasterization.png"
+      image: "images/3dRasterization.png"
     },
     {
       title: "Images Stiching",
       description: "An image processing application developed in MATLAB that combines multiple images of the same location taken from different angles into a single panoramic view. The project implements advanced computer vision techniques for feature detection, image alignment, and seamless blending. Key aspects include matching corresponding points between images, computing homography transformations, and implementing stitching algorithms to create cohesive panoramic outputs.",
-      image: "/images/imagesStitching.png"
+      image: "images/imagesStitching.png"
     },
   ];
 
@@ -28,22 +28,22 @@ const Portfolio = () => {
     {
       title: "Disease Prediction Webpage",
       description: "A machine learning-powered web application that predicts diseases based on patient symptoms. The project encompasses comprehensive data preprocessing of symptom-disease relationships from CSV datasets. Key features include implementation of machine learning algorithms for disease prediction and thorough model evaluation using multiple performance metrics (accuracy, F1 score, precision, cross-validation).",
-      image: "/images/diseasepred.png"
+      image: "images/diseasepred.png"
     },
     {
       title: "Jewelry Store Management Webapp",
       description: "A comprehensive e-commerce platform that streamlines jewelry store operations from order placement to delivery. The system features multi-user functionality with distinct interfaces for customers, delivery drivers, and administrators. The platform enables administrators to monitor customer orders in real-time while facilitating seamless communication between customers and delivery personnel.",
-      image: "/images/kkj.png"
+      image: "images/kkj.png"
     },
     {
       title: "Gold Price Prediction Webpage",
       description: "A financial forecasting web application that leverages machine learning to predict gold prices. The project combines real-time data scraping capabilities using BeautifulSoup and Requests with advanced ML models implemented through Scikit-learn and Pandas. Key features include linear regression and KNN algorithms for price prediction analysis.",
-      image: "/images/goldpred.png"
+      image: "images/goldpred.png"
     },
     {
       title: "The Jungle Game",
       description: "An interactive two-player strategy board game developed with PyGame, showcasing engaging graphics and complex game mechanics. The implementation features comprehensive rule systems for player turns and movements, along with strategic win conditions that create challenging gameplay experiences. The project demonstrates skills in game development, user interface design, and logic implementation.",
-      image: "/images/jungleGame.png"
+      image: "images/jungleGame.png"
     },
   ];
 
@@ -63,7 +63,7 @@ const Portfolio = () => {
           {/* Profile Picture */}
           <div className="w-48 h-48 flex-shrink-0">
             <img
-              src="/images/profilePic.jpg"
+              src="images/profilePic.jpg"
               alt="Profile"
               className="w-full h-full object-cover rounded"
             />
