@@ -56,12 +56,12 @@ const Portfolio = () => {
 
   return(
   <div className="min-h-screen bg-[#2b2e2f] text-white">
-    {/* Header */}
-    <div className="relative px-8 py-6">
+    {/* Header - Make it stack on mobile */}
+    <div className="relative px-4 sm:px-8 py-6"> {/* Reduced padding on mobile */}
       <div className="container mx-auto">
-        <div className="flex items-start gap-8">
-          {/* Profile Picture */}
-          <div className="w-48 h-48 flex-shrink-0">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8"> {/* Stack on mobile */}
+          {/* Profile Picture - Centered on mobile */}
+          <div className="w-36 h-36 md:w-48 md:h-48 flex-shrink-0"> {/* Smaller on mobile */}
             <img
               src="images/profilePic.jpg"
               alt="Profile"
@@ -69,9 +69,9 @@ const Portfolio = () => {
             />
           </div>
           {/* Name and Contact Info */}
-          <div className="flex flex-col justify-center">
-            <h1 className="text-4xl font-bold mb-6">QUINNIE CAO</h1>
-            <div className="flex flex-col gap-3">
+          <div className="flex flex-col items-center md:items-start justify-center">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-center md:text-left">QUINNIE CAO</h1>
+            <div className="flex flex-col gap-3 text-sm md:text-base">
               <div className="flex items-center gap-2">
                 <Phone size={20} className="text-gray-300" />
                 <span>(778)-919-8245</span>
@@ -108,14 +108,23 @@ const Portfolio = () => {
       </div>
     </div>
 
-    {/* Summary Section */}
-    <div className="max-w-4xl mx-auto  py-1 ">
-      <h2 className="text-3xl font-bold mb-8 text-center">SKILLS</h2>
-      <ul className="space-y-2">
-        <li><b>• Programming Languages:</b> C++, Python, Java, HTML, CSS, Javascript, C, MATLAB, Rust, Haskell, Coq, RISC-V</li>
-        <li><b>• Frameworks:</b> SpringBoot, React, Flask</li>
-        <li><b>• Supporting Tools:</b>  Render, Git, GitHub, Docker, Thymeleaf, MockMVC, OpenCV, BeautifulSoup, Matplotlib, 
-              Scikit-learn, Pandas, NumPy, PyGame, PostgreSQL, OpenGL, Linux, Ubuntu</li>
+    {/* Skills Section */}
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-1">
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">SKILLS</h2>
+      <ul className="space-y-3 text-sm md:text-base">
+        <li className="flex flex-col md:flex-row md:items-center gap-2">
+          <b className="whitespace-nowrap">• Programming Languages:</b>
+          <span>C++, Python, Java, HTML, CSS, Javascript, C, MATLAB, Rust, Haskell, Coq, RISC-V</span>
+        </li>
+        <li className="flex flex-col md:flex-row md:items-center gap-2">
+          <b className="whitespace-nowrap">• Frameworks:</b>
+          <span>SpringBoot, React, Flask</span>
+        </li>
+        <li className="flex flex-col md:flex-row md:items-center gap-2">
+          <b className="whitespace-nowrap">• Supporting Tools:</b>
+          <span>Render, Git, GitHub, Docker, Thymeleaf, MockMVC, OpenCV, BeautifulSoup, Matplotlib, 
+                Scikit-learn, Pandas, NumPy, PyGame, PostgreSQL, OpenGL, Linux, Ubuntu</span>
+        </li>
       </ul>
     </div>
 
@@ -199,12 +208,12 @@ const Portfolio = () => {
       </div>
     </div>
 
-    {/* Education Section */}
-    <div className="py-16 text-center">
-        <h2 className="text-3xl font-bold mb-4">EDUCATION</h2>
-        <p className="text-xl">Bachelor of Science in Computing Science ( 09/2023 - 12/2026 )</p>
-        <p className="text-gray-200">Simon Fraser University | Burnaby</p>
-      </div>
+{/* Education Section - Adjust text size */}
+<div className="py-8 md:py-16 text-center px-4">
+  <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">EDUCATION</h2>
+  <p className="text-lg md:text-xl">Bachelor of Science in Computing Science ( 09/2023 - 12/2026 )</p>
+  <p className="text-gray-200 text-sm md:text-base">Simon Fraser University | Burnaby</p>
+</div>
 
   </div>
   )
