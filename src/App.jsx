@@ -22,7 +22,7 @@ const Portfolio = () => {
       title: "Disease Prediction Webpage",
       description: "A machine learning-powered web application that predicts diseases based on patient symptoms developed by Flask and Scikit-learn. The project encompasses comprehensive data preprocessing of symptom-disease relationships from CSV datasets. Key features include implementation of machine learning algorithms for disease prediction.",
       image: "images/diseasepred.png",
-      githubLink:"https://github.com/caokhanhquynh/Disease-Prediction"
+      githubLink:"https://github.com/caokhanhquynh/Predict-Diseases-By-Symptoms"
     },
     {
       title: "Jewelry Store Management Webapp",
@@ -43,45 +43,6 @@ const Portfolio = () => {
       githubLink:"https://github.com/caokhanhquynh/The_Jungle_Game"
     },
   ];
-
-  const [weather, setWeather] = useState(null);
-  const [city, setCity] = useState("Ho Chi Minh"); // Replace with desired default city
-  const weatherEmojis = {
-    Clear: "☀️",
-    Clouds: "☁️",
-    Rain: "🌧️",
-    Drizzle: "🌦️",
-    Thunderstorm: "⛈️",
-    Snow: "❄️",
-    Mist: "🌫️",
-    Fog: "🌫️",
-    Haze: "🌁",
-    Smoke: "💨",
-    Dust: "🌬️",
-    Sand: "🌵",
-  };
-
-
-  useEffect(() => {
-    const fetchWeather = async () => {
-      try {
-        const API_KEY = import.meta.env.VITE_API_KEY;
-        console.log("api: ", API_KEY);
-        const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
-        );
-        setWeather(response.data);
-      } catch (error) {
-        console.error("Error fetching weather data:", error);
-      }
-    };
-
-    fetchWeather();
-  }, [city]);
-  
-  const getWeatherEmoji = (condition) => {
-    return weatherEmojis[condition] || "🌈"; // Default emoji if no match
-  };
 
   return(
     
@@ -139,11 +100,6 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-        {weather && (
-          <div className="absolute top-0 right-0 m-6 text-gray-300 text-sm">
-             {getWeatherEmoji(weather.weather[0].main)} {`Currently coding in ${weather.weather[0].description} ${city}`}
-          </div>
-        )}
       </div>
     </div>
 
@@ -166,11 +122,11 @@ const Portfolio = () => {
       <div className="space-y-6 text-sm md:text-base">
         <div className="space-y-2">
           <div className="font-bold text-lg md:text-xl mb-2">Programming Languages</div>
-          <div>C++, C, Python, Java, HTML, CSS, Javascript, TypeScript, MATLAB, Rust, Haskell, Coq, RISC-V, R</div>
+          <div>C++, Python, Java, HTML, CSS, JavaScript, C, Rust, Haskell, MATLAB, RISC-V, Typescript</div>
         </div>
         <div className="space-y-2">
           <div className="font-bold text-lg md:text-xl mb-2">Frameworks</div>
-          <div>SpringBoot, React, Flask, Next.js</div>
+          <div>SpringBoot, React, Flask, Next.js, Express</div>
         </div>
       </div>
     </div>
@@ -185,7 +141,7 @@ const Portfolio = () => {
             href={project.githubLink} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="bg-gray-900 rounded-lg overflow-hidden transition-transform transform hover:scale-105"
+            className="bg-gray-800 rounded-lg overflow-hidden transition-transform transform hover:scale-105"
           >
             <div className="relative h-48">
               <img 
@@ -221,7 +177,6 @@ const Portfolio = () => {
         SIMON FRASER UNIVERSITY | BC | Canada ( 09/2023 - 12/2026 )
       </a>
       <p className="text-gray-200 text-sm md:text-base">Bachelor of Science in Computing Science</p>
-      <p className="text-gray-200 text-sm md:text-base">GPA: 3.43</p>
     </div>
 
     {/* Footer Section */}
